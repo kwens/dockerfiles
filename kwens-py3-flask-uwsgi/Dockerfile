@@ -29,13 +29,7 @@ RUN apk add --no-cache --virtual .build-deps mariadb-dev linux-headers postgresq
     pip install uwsgi --no-cache-dir && \
     pip install numpy --no-cache-dir && \
     pip install  -r /tmp/requirements.txt --no-cache-dir && \
-    apk del .build-deps && \
-    find /usr/local -depth \
-		\(\
-			\( -type d -a \( -name test -o -name tests \) \) \
-			-o \
-			\( -type f -a \( -name '*.pyc' -o -name '*.pyo' \) \) \
-		\) -exec rm -rf '{}' +
+    apk del .build-deps
 RUN apk add --no-cache mariadb-client-libs libpq tzdata
 
 RUN rm -rf /tmp/requirements.txt
