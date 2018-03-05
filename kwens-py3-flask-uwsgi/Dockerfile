@@ -30,9 +30,6 @@ RUN apk update && apk add \
     && pip install --no-cache-dir uWSGI>=2.0.15 \
     && rm -rf /tmp/*
 
-# uwsgi配置
-COPY uwsgi.ini /etc/uwsgi/uwsgi.ini
-
 # 安卓NGINX
 RUN apk add nginx --no-cache
 
