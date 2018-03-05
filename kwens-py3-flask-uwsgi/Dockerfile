@@ -32,8 +32,3 @@ RUN apk update && apk add \
 
 # 安卓NGINX
 RUN apk add nginx --no-cache
-
-COPY requirements.txt /tmp/requirements.txt
-RUN pip install  -r /tmp/requirements.txt --no-cache-dir
-
-RUN rm -rf /tmp/requirements.txt
