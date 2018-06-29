@@ -24,6 +24,7 @@ RUN apk update && apk add \
         gcc \
 	g++ \
         libc-dev \
+	libffi-dev \
         linux-headers \
         pcre-dev \
 		jpeg-dev \
