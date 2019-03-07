@@ -18,7 +18,7 @@ RUN pip install --upgrade pip
 
 RUN pip install --upgrade setuptools
 
-RUN pip install pandas
+RUN pip install numpy && pandas
 
 # 安装依赖
 RUN apk update && apk add \
