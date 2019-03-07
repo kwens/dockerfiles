@@ -14,6 +14,8 @@ ENV TZ Asia/Shanghai
 # 设置默认pip镜像
 RUN mkdir -p ~/.pip && echo -e "[global]\ntimeout = 6000\nindex-url = https://pypi.doubanio.com/simple\n\n[install]\nuse-mirrors = true\nmirrors = https://pypi.doubanio.com/simple\ntrusted-host = pypi.doubanio.com" > ~/.pip/pip.conf
 
+RUN pip install --upgrade pip
+
 RUN pip install --upgrade setuptools
 
 RUN pip -V
