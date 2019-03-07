@@ -16,6 +16,8 @@ RUN mkdir -p ~/.pip && echo -e "[global]\ntimeout = 6000\nindex-url = https://py
 
 RUN pip install --upgrade setuptools
 
+RUN pip -V
+
 # 安装依赖
 RUN apk update && apk add \
         libuuid \
