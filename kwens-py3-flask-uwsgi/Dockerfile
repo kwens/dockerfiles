@@ -38,5 +38,5 @@ RUN apk update && apk add \
     && pip install --no-cache-dir uWSGI>=2.0.15 \
     && rm -rf /tmp/*
 
-# 安卓NGINX
+# 安装NGINX
 RUN apk add nginx --no-cache
